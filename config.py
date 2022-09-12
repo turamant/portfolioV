@@ -15,9 +15,9 @@ class BaseConfig:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # flask-security #
-    SECURITY_PASSWORD_SALT = 'salt'
-    SECURITY_PASSWORD_HASH = 'pbkdf2_sha256'
-    STORAGE = '/home/tornado/PycharmProjects/pythonProject/MyPortfolio/app_portfolio/static/img'
+    SECURITY_PASSWORD_SALT = os.environ.get('SECURITY_PASSWORD_SALT')
+    SECURITY_PASSWORD_HASH = os.environ.get('SECURITY_PASSWORD_HASH')
+    STORAGE = os.environ.get('STORAGE')
     ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 
