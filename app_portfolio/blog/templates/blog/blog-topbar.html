@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+
+{{ super() }}
+
+{% block content %}
+  <div class="vg-page page-blog">
+    <div class="container">
+      <div class="row widget-grid">
+        <div class="col-lg-8">
+          <div class="input-group py-2">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex py-2 mx-n2">
+            <div class="input-group px-2">
+              <select class="vg-select">
+                <option value="">Category</option>
+                <option value="cat-1">Design</option>
+                <option value="cat-2">Technology</option>
+                <option value="cat-3">Graphics</option>
+                <option value="cat-4">UI/UX</option>
+              </select>
+            </div>
+            <div class="input-group px-2">
+              <select class="vg-select">
+                <option value="">Sort By</option>
+                <option value="cat-1">Newest</option>
+                <option value="cat-2">Popular</option>
+                <option value="cat-3">Recommended</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row post-grid">
+          {% for post in posts %}
+                {% include 'blog/partials/post_list_item.html' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+{% endblock%}
+
+
+
+
+
