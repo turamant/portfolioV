@@ -6,3 +6,5 @@ __pycache__
 passford.txt
 migrations
 app_portfolio/static
+app_portfolio/templates
+app_portfolio/ssl

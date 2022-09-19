@@ -1,0 +1,557 @@
+{% extends 'base.html' %}
+
+{{ super() }}
+
+{% block content %}
+    <!-- Caption header -->
+<div class="caption-header text-center wow zoomInDown" xmlns="http://www.w3.org/1999/html">
+      <h5 class="fw-normal">Привет</h5>
+      <h1 class="fw-light mb-4">Я <b class="fg-theme">Victor</b> Askvart</h1>
+      <div class="badge">Python & Web Разработчик</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+  
+  <div class="vg-page page-about" id="about">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/person.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+          <h1 class="fw-light">Victor Askvart</h1>
+          <h5 class="fg-theme mb-3">Python & Web Разработчик</h5>
+          <p class="text-muted">Я опытный разработчик. Любые приложения и задачи.
+            Python родной язык, Django и Flask любимые фреймворки.</p>
+          <ul class="theme-list">
+            <li><b>Родом :</b> Томск, RU</li>
+            <li><b>Живу в :</b> Москва, RU</li>
+            <li><b>Возраст :</b> 45</li>
+          </ul>
+
+
+          <button class="btn btn-theme-outline"><a href="{{ url_for('download_file')}}"> Скачать CV</a></button>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="vg-page page-about" id="scills">
+    <div class="container py-5">
+      <h1 class="text-center fw-normal wow fadeIn">Мои навыки</h1>
+      <div class="row py-3">
+        <div class="col-md-6">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Языки программирования</h4>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Python</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">JavaScript</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">HTML + CSS</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Go</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">70%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Базы данных и субд</h4>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Postgre</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">MySql</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">MongoDB</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Redis</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">70%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Другине инструменты</h4>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Celery</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Elasticsearch</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Apache Kafka</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Rest Api</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Фреймворки</h4>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Django</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Flask</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">Vue JS</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+            <div class="progress-wrapper wow fadeInUp">
+              <span class="caption">PyQT5</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-6 wow fadeInRight">
+          <h2 class="fw-normal">Образование</h2>
+          <ul class="timeline mt-4 pr-md-5">
+            <li>
+              <div class="title">2016</div>
+              <div class="details">
+                <h5>Базы данных предприятия</h5>
+                <small class="fg-theme">ТУСУР</small>
+                <p>Системы управления базами данных</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">2009</div>
+              <div class="details">
+                <h5>Программная инженерия</h5>
+                <small class="fg-theme">ТУСУР</small>
+                <p>Прикладное программирование</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">1998</div>
+              <div class="details">
+                <h5>Автоматизированные ситемы управления</h5>
+                <small class="fg-theme">ТУСУР</small>
+                <p>Алгоритмы и структуры данных</p>
+                <p>Автоматизация технологических процессов</p>
+                <p>Автоматизация рабочих мест</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
+          <h2 class="fw-normal">Опыт</h2>
+          <ul class="timeline mt-4 pr-md-5">
+            <li>
+              <div class="title">2017 - настоящее время</div>
+              <div class="details">
+                <h5>Программист фрилансер</h5>
+                <small class="fg-theme">Askvart Ltd.</small>
+                <p>Выполняю заказы по проектированию, разработке и внедрению программного обеспечения</p>
+                <p>Python, Linux</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">2010</div>
+              <div class="details">
+                <h5>Веб-мастер</h5>
+                <small class="fg-theme">Частная компания</small>
+                <p>Разработка сайтов, их верстка, дизайн, создание контента ,
+                   размещение их в сети , продвижение в поисковых системах и обеспечение технической поддержки.
+                </p>
+                <p>Joomla, Wordpress, PHP</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">2007</div>
+              <div class="details">
+                <h5>Системный администратор</h5>
+                <small class="fg-theme">Частная компания</small>
+                <p>Сопровождение серверов и компьютеров предприятий-клиентов</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">2000</div>
+              <div class="details">
+                <h5>Инженер-программист</h5>
+                <small class="fg-theme">Металлургический завод</small>
+                <p>Создание автоматизированных рабочих мест сотрудников предприятия.</p>
+                <p>Pascal, C, Clipper</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vg-page page-service">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Услуги</div>
+      </div>
+      <h1 class="fw-normal text-center wow fadeInUp">Что я могу делать?</h1>
+      <div class="row mt-5">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-paint-bucket"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Веб-дизайн</h4>
+              <p>Дизайн сайта, Дизайн «лэндинг пейдж», Услуга сайт «под ключ»</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-search"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">SEO</h4>
+              <p>Продвижение сайта в ТОП 10, продвижение молодых сайтов</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-vector"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">UI/UX Дизайн</h4>
+              <p>Прототипирование,проектирование визуальной части</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-desktop"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Веб-разработка</h4>
+              <p>Разрабатывю сложные сайты и веб-приложения с большим объем
+                трафика</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vg-page page-funfact" style="background-image: url({{ url_for('static', filename='/assets/img/bg_banner.jpg')}});">
+    <div class="container">
+      <div class="row section-counter">
+        <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
+          <h1 class="number" data-number="68">68</h1>
+          <span>Клиенты</span>
+        </div>
+        <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
+          <h1 class="number" data-number="20">20</h1>
+          <span>Проект завершен</span>
+        </div>
+        <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
+          <h1 class="number" data-number="7">7</h1>
+          <span>Проект продолжается</span>
+        </div>
+        <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
+          <h1 class="number" data-number="68">68</h1>
+          <span>Удовлетворенность клиентов</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Portfolio page -->
+  <div class="vg-page page-portfolio" id="portfolio">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Портфолио</div>
+      </div>
+      <h1 class="text-center fw-normal wow fadeInUp">Посмотреть мои работы</h1>
+      <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+        <button class="btn btn-theme-outline selected" data-filter="*">Все</button>
+        <button class="btn btn-theme-outline" data-filter=".apps">Приложения</button>
+        <button class="btn btn-theme-outline" data-filter=".template">Сайты</button>
+        <button class="btn btn-theme-outline" data-filter=".ios">SEO</button>
+        <button class="btn btn-theme-outline" data-filter=".ui-ux">WEB</button>
+        <button class="btn btn-theme-outline" data-filter=".graphic">Продвижение</button>
+        <button class="btn btn-theme-outline" data-filter=".wireframes">Аналитика</button>
+      </div>
+
+      <div class="gridder my-3">
+        <div class="grid-item apps wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-1.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>Table tennis shop</h5> <p>e-commerce, e-shop</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-1.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">Table tennis shop</h5>
+              <p>e-commerce, e-shop</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-2.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>Sport App</h5> <p>Blog</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-2.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">Sport App</h5>
+              <p>Blog</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps ios wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-3.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>Clinic App</h5> <p>Clinic, Health</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-3.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">Clinic App</h5>
+              <p>Clinic, Health</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item graphic ui-ux wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-4.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>Drugs Delivery App</h5> <p>Health, Drugs</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-4.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">Drugs Delivery App</h5>
+              <p>Health, Drugs</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps ios wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-5.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>WEB Studio</h5> <p>WEB, Agency</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-5.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">WEB Studio</h5>
+              <p>WEB, Agency</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item graphic ui-ux wireframes wow zoomIn">
+          <div class="img-place" data-src="{{ url_for('static', filename='/assets/img/work/work-6.jpg')}}" data-fancybox data-caption="<h5 class='fg-theme'>SEO Promotion</h5> <p>SEO, Promotion</p>">
+            <img src="{{ url_for('static', filename='/assets/img/work/work-6.jpg')}}" alt="">
+            <div class="img-caption">
+              <h5 class="fg-theme">SEO Promotion</h5>
+              <p>SEO, Promotion</p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End gridder -->
+      <div class="text-center wow fadeInUp">
+        <a href="javascript:void(0)" class="btn btn-theme">Загрузить еще</a>
+      </div>
+    </div>
+  </div> <!-- End Portfolio page -->
+  
+  <!-- Testimonial -->
+  <div class="vg-page page-testimonial">
+    <div class="container">
+      <h1 class="text-center fw-normal wow fadeInUp">Что говорят клиенты</h1>
+      <div class="row justify-content-center mt-5 wow fadeInUp">
+        <div class="col-md-9">
+          <div class="owl-carousel testi-carousel">
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img-place">
+                    <img src="{{ url_for('static', filename='/assets/img/testimonials/testimonials_1.jpg')}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="caption">
+                    <div class="testi-content">
+                      Процесс разработки занял меньше оговоренного срока.
+                      В общем и целом, компания проявила себя на высшем уровне профессионализма!!!
+                      Моя оценка о компании и сотрудниках: Превосходно!!!</div>
+                    <div class="testi-info">
+                      <div class="thumb-profile">
+                        <img src="{{ url_for('static', filename='/assets/img/testimonials/testimonials_1.jpg')}}" alt="">
+                      </div>
+                      <div class="tagline">
+                        <h5 class="mb-0">Светлана Бодрова</h5>
+                        <span class="text-muted">ООО "MaxWell"</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img-place">
+                    <img src="{{ url_for('static', filename='/assets/img/testimonials/testimonials_2.jpg')}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="caption">
+                    <div class="testi-content">
+                      Среди многих претендентов, предложение данного разработчика было наиболее оптимальным по соотношению
+                      цены-качества разработки и сопровождения будущего сайта.
+                    </div>
+                    <div class="testi-info">
+                      <div class="thumb-profile">
+                        <img src="{{ url_for('static', filename='/assets/img/testimonials/testimonials_2.jpg')}}" alt="">
+                      </div>
+                      <div class="tagline">
+                        <h5 class="mb-0">Иван Скворец</h5>
+                        <span class="text-muted">АО"Иволга" директор по маркетингу</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End testimonial -->
+  
+  <!-- Client -->
+  <div class="vg-page page-client">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <a href="http://www.lenta.ru"><img src="{{ url_for('static', filename='/assets/img/logo/company_1.svg')}}" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_2.svg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_3.svg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_4.svg')}}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_5.svg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_6.svg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_7.svg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 item">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ url_for('static', filename='/assets/img/logo/company_8.svg')}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End client -->
+
+  <!-- Contact -->
+  <div class="vg-page page-contact" id="contact">
+    <div class="container-fluid">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Контакты</div>
+      </div>
+      <h1 class="text-center fw-normal wow fadeInUp">Связаться</h1>
+      <div class="row py-5">
+        <div class="col-lg-7 px-0 pr-lg-3 wow zoomIn">
+          <div class="vg-maps">
+              <iframe src="https://yandex.ru/map-widget/v1/-/CCUVBLCypA" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <form class="vg-contact-form" action="{{ url_for('index') }}" method="post">
+            <input type="hidden" name="form_type" value="formOne">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="form-row">
+              <div class="col-12 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="name" placeholder="Ваше имя">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="email" name="email" placeholder="Email адрес">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="subject" placeholder="Тема">
+              </div>
+              <div class="col-12 mt-3 wow fadeInUp">
+                <textarea class="form-control" name="message" rows="6" placeholder="Ввведите свое сообщение здесь.."></textarea>
+              </div>
+              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Отправить сообщение</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Contact -->
+
+{% endblock %}
+  

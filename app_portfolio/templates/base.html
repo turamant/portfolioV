@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="Askvart, http://134.0.117.90/">
 
-  <title>Vitaly G. Portfolio</title>
+  <title>Victor Askvart Portfolio</title>
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='/assets/favicon.ico') }}" type="image/x-icon">
 
@@ -44,91 +44,77 @@
       <div class="d-block">
         <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
       </div>
-      <!-- Puschase -->
-      <div class="d-block">
-        <a href="https://macodeid.com/projects/virtual-folio/" class="btn btn-fab btn-sm" title="Get this template" data-toggle="tooltip" data-placement="left"><span class="ti-download"></span></a>
-      </div>
-      <!-- Help -->
-      <div class="d-block">
-        <a href="#" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
-      </div>
+
     </div>
     <div class="set-menu">
       <p>Выбрать цвет</p>
       <div class="color-bar" data-toggle="selected">
-        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
         <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
         <span class="color-item bg-theme-green" data-class="theme-green"></span>
         <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
         <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
       </div>
-      <select class="custom-select d-block my-2" id="change-page">
-        <option value="">Choose Page</option>
-        <option value="index">Topbar</option>
-        <option value="blog-topbar">Blog (Topbar)</option>
-        <option value="index-2">Minibar</option>
-        <option value="blog-minibar">Blog (Minibar)</option>
-      </select>
     </div>
   </div>
 
   <div class="vg-page page-home" id="home" style="background-image: url({{ url_for('static', filename='/assets/img/bg_image_1.jpg')}})">
-    {% include 'app/navbar.html' %}
+    {% include 'navbar.html' %}
 
     {% block content %}
     {% endblock %}
+  </div>
 
   <!-- Footer -->
   <div class="vg-footer">
-    <h1 class="text-center">Virtual Folio</h1>
+    <h1 class="text-center">Victor Askvart</h1>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 py-3">
           <div class="footer-info">
-            <p>Where to find me</p>
+            <p>Связь по вопросу разработки</p>
             <hr class="divider">
-            <p class="fs-large fg-white">1600 Amphitheatre Parkway Mountain View, California 94043 US</p>
+            <p class="fs-large fg-white">tur1amant@gmail.com</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 py-3">
           <div class="float-lg-right">
-            <p>Follow me</p>
+            <p>Социальные сети</p>
             <hr class="divider">
             <ul class="list-unstyled">
               <li><a href="#">Instagram</a></li>
               <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Telegram</a></li>
               <li><a href="#">Youtube</a></li>
             </ul>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 py-3">
           <div class="float-lg-right">
-            <p>Contact me</p>
+            <p>Предложение вакансии</p>
             <hr class="divider">
             <ul class="list-unstyled">
-              <li>info@virtual.com</li>
-              <li>+8890234</li>
-              <li>+813023</li>
+              <li>askvart@yahoo.com</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="row justify-content-center mt-3">
         <div class="col-12 mb-3">
-          <h3 class="fw-normal text-center">Subscribe</h3>
+          <h3 class="fw-normal text-center">Подписывайся</h3>
         </div>
         <div class="col-lg-6">
-          <form class="mb-3">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Email address">
-              <input type="submit" class="btn btn-theme no-shadow" value="Subscribe">
+              <form class="mb-3 vg-contact-form" action="{{ url_for('index')}}" method="post">
+                <div class="input-group">
+                  <input type="hidden" name="form_type" value="formTwo">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                  <input class="form-control" type="email" name="email" placeholder="Email адрес ...">
+                  <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Подписаться</button>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36308.788245695396!2d42.1855232!3d55.33532159999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1662996523503!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="col-12">
-          <p class="text-center mb-0 mt-4">Copyright &copy;2022. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="http://134.0.117.90/">Askvart</a></p>
+          <p class="text-center mb-0 mt-4">Copyright &copy;2022. Все права защищены <span class="ti-heart fg-theme-red"></span> <a href="http://134.0.117.90/">Askvart</a></p>
         </div>
       </div>
     </div>
@@ -158,8 +144,6 @@
   <script src="{{ url_for('static', filename='/assets/js/google-maps.js')}}"></script>
 
   <script src="{{ url_for('static', filename='/assets/js/topbar-virtual.js')}}"></script>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
   </body>
 </html>
